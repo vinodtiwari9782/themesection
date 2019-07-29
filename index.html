@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+function iframeDidLoad() {
+    alert('Done');
+}
+
+function newSite() {
+    var frame_src = document.getElementsByName('frame1')[0].src 
+    var encodedUrl = encodeURIComponent(frame_src);	
+    alert(encodedUrl);
+	// document.getElementById("myIframe").src = encodedUrl;	
+} 
+</script>   
+<input type="button" value="Change site" onClick="newSite()" />
+<iframe name="frame1" id="myIframe" src="http://spycoffees.itpeople4u.com" onLoad="iframeDidLoad();"></iframe>
+</body>
+</html>
